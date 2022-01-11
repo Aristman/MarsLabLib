@@ -1,9 +1,10 @@
-package ru.marslab.marslablib
+package ru.marslab.marslablib.compose
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import ru.marslab.marslablib.UiState
 
 abstract class BaseComposeViewModel<D : Any, E : Any> : ViewModel() {
     var uiState by mutableStateOf<UiState<D, E>>(UiState.Init)
