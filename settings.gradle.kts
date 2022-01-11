@@ -6,4 +6,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MarsLab Lib"
-include(":app")
+include(":base")
