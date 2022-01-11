@@ -1,6 +1,20 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("maven-publish")
+}
+
+extra.apply {
+    // group id
+    set("PUBLISH_GROUP_ID", "ru.marslab.marlablib")
+    // текущая версия библиотеки
+    set("PUBLISH_VERSION", "1.0.0")
+    // artifact id библиотеки
+    set("PUBLISH_ARTIFACT_ID", "base-classes")
+}
+
+apply {
+    from("${rootProject.projectDir}/scripts/publish-module.gradle")
 }
 
 android {
