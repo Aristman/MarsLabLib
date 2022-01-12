@@ -10,15 +10,15 @@ abstract class BaseViewModel<D : Any, E : Any> : ViewModel() {
     val uiState: StateFlow<UiState<D, E>> =
         _uiState.asStateFlow()
 
-    open fun setLoading(progress: Float? = null) {
+    open fun setLoadingState(progress: Float? = null) {
         _uiState.tryEmit(UiState.Loading(progress))
     }
 
-    open fun setSuccessful(data: D) {
+    open fun setSuccessfulState(data: D) {
         _uiState.tryEmit(UiState.Success(data))
     }
 
-    open fun setError(error: E) {
+    open fun setErrorState(error: E) {
         _uiState.tryEmit(UiState.Error(error))
     }
 }
