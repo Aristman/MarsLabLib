@@ -6,11 +6,11 @@ plugins {
 
 extra.apply {
     // group id
-    set("PUBLISH_GROUP_ID", "ru.marslab.marlablib")
+    set("PUBLISH_GROUP_ID", "ru.mars-lab")
     // текущая версия библиотеки
     set("PUBLISH_VERSION", "1.0.0")
     // artifact id библиотеки
-    set("PUBLISH_ARTIFACT_ID", "base-classes")
+    set("PUBLISH_ARTIFACT_ID", "base")
 }
 
 apply {
