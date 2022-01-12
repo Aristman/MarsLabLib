@@ -8,9 +8,9 @@ extra.apply {
     // group id
     set("PUBLISH_GROUP_ID", "ru.mars-lab")
     // текущая версия библиотеки
-    set("PUBLISH_VERSION", "1.0.0")
+    set("PUBLISH_VERSION", "1.1.0")
     // artifact id библиотеки
-    set("PUBLISH_ARTIFACT_ID", "base")
+    set("PUBLISH_ARTIFACT_ID", "base-classes")
 }
 
 apply {
@@ -45,6 +45,11 @@ android {
 
     buildFeatures {
         viewBinding = true
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.0.5"
     }
 }
 
@@ -60,5 +65,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
 
     // Jetpack Compose
-    implementation("androidx.compose.runtime:runtime:1.1.0-rc01")
+    implementation("androidx.compose.ui:ui:1.0.5")
+    implementation("androidx.compose.ui:ui-tooling:1.0.5")
+    implementation("androidx.compose.foundation:foundation:1.0.5")
+    implementation("androidx.compose.runtime:runtime:1.0.5")
+    implementation("androidx.compose.material:material:1.0.5")
 }
