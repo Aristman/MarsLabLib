@@ -23,8 +23,8 @@ private const val LOADING_ERROR = "Loading error!"
 private const val REPEAT = "Repeat loading"
 
 /**
- * @author Sergey Aristov
  * Basic View for display minimum user screen.
+ * @author Sergey Aristov
  *
  * @param appViewState UiState with view state, Content view user data
  *          <D> - type of Data, <E> - type of Error
